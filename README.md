@@ -2,7 +2,7 @@
 
 [![Status](https://img.shields.io/badge/Status-Research%20%26%20RFC-blue.svg)](#)
 [![Target](https://img.shields.io/badge/Target-.NET%208-purple.svg)](#)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 **DASS/PASS** is a proposed deterministic, database-aware, project-aware, and logic-aware scaffolding framework for ASP.NET Core MVC. It is designed to extend—not replace—Microsoft’s existing scaffolding capabilities.
 
