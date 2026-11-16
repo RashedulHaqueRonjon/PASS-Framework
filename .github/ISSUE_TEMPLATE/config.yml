@@ -1,0 +1,11 @@
+# This disables the "Open a blank issue" option
+blank_issues_enabled: false
+
+# These appear as clickable buttons in the template chooser
+contact_links:
+  - name: 💬 Community Discussions
+    url: https://github.com/RashedulHaqueRonjon/PASS-Framework/discussions
+    about: Please ask general questions or start a discussion here.
+  - name: 🔒 Report a Security Vulnerability
+    url: https://github.com/RashedulHaqueRonjon/PASS-Framework/security/advisories/new
+    about: Please report security issues privately.
