@@ -1,4 +1,5 @@
 # DASS/PASS: Database/Project Aware Smart Scaffolder
+![DASS/PASS Banner](docs/images/DassPass.png)
 
 [![Status](https://img.shields.io/badge/Status-Research%20%26%20RFC-blue.svg)](#)
 [![Target](https://img.shields.io/badge/Target-.NET%208-purple.svg)](#)
@@ -28,8 +29,8 @@ To understand the vision, please read the following documents:
 ## 🤝 How to Contribute Right Now
 You don't need to write C# code to help yet. We need **architects, senior .NET developers, and researchers** to review our blueprints. 
 1. Read the [Discussion Topics](docs/rfc/DiscussionTopics.md).
-2. Open an [Issue](https://github.com/RashedulHaqueRonjon/DASS-PASS/issues) with your feedback.
+2. Open an [Issue](https://github.com/RashedulHaqueRonjon/PASS-Framework/issues) with your feedback.
 3. Share this repository with other .NET developers.
 
 ## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
