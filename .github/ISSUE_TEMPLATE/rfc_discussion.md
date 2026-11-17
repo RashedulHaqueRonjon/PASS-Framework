@@ -10,7 +10,7 @@ assignees: ''
 (A clear and concise summary of the topic.)
 
 **Why is this important?**
-(Explain how this impacts the DASS/PASS project or the .NET ecosystem.)
+(Explain how this impacts the PASS project or the .NET ecosystem.)
 
 **Your Thoughts**
 (What are your opinions or suggestions on this topic?)
