@@ -1,5 +1,5 @@
 # PASS: Project Aware Smart Scaffolder
-![PASS Banner](docs/images/DassPass.png)
+![PASS Banner](docs/images/PSSS-Framework.png)
 
 [![Status](https://img.shields.io/badge/Status-Research%20%26%20RFC-blue.svg)](#)
 [![Target](https://img.shields.io/badge/Target-.NET%208-purple.svg)](#)
