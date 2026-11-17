@@ -14,7 +14,7 @@
 Microsoft's default scaffolding is excellent for the first generation of code. However, in real-world iterative development, scaffolding is destructive. If your database schema changes, re-running scaffolding can overwrite your custom logic and UI.
 
 ## 💡 The Solution: PASS
-DASS sits alongside Microsoft's scaffolder. It introduces **Project Memory** and **Safe Regeneration**:
+PASS sits alongside Microsoft's scaffolder. It introduces **Project Memory** and **Safe Regeneration**:
 1. **Project Memory (`pass.json`)**: Remembers your UI/UX conventions (Dark mode, Syncfusion, pagination, etc.) and applies them to all future scaffolds.
 2. **Roslyn Merging**: Instead of overwriting `Customer.cs`, PASS uses Abstract Syntax Trees (AST) to inject *only* the new database properties (e.g., `Email`, `Status`) while preserving your custom logic.
 
