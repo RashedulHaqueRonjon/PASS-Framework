@@ -1,6 +1,6 @@
 # System Architecture
 
-DASS/PASS is designed as a cross-platform .NET CLI tool (`dotnet dass`) with an accompanying Visual Studio Extension (VSIX) that acts as a UI wrapper.
+PASS is designed as a cross-platform .NET CLI tool (`dotnet pass`) with an accompanying Visual Studio Extension (VSIX) that acts as a UI wrapper.
 
 ## Core Components
 
@@ -9,10 +9,10 @@ DASS/PASS is designed as a cross-platform .NET CLI tool (`dotnet dass`) with an 
          │
          ▼
 ┌───────────────────────────────────────────────┐
-│             DASS.Core Engine                  │
+│             PASS.Core Engine                  │
 │                                               │
 │  [1. Configuration Manager]                   │
-│      - Reads/Writes `dass.json`               │
+│      - Reads/Writes `pass.json`               │
 │                                               │
 │  [2. Database Analyzer]                       │
 │      - Reads EF Core Models / SQL Schema      │
@@ -24,7 +24,7 @@ DASS/PASS is designed as a cross-platform .NET CLI tool (`dotnet dass`) with an 
 │                                               │
 │  [4. Generation Engine]                       │
 │      - Loads T4/Razor templates               │
-│      - Applies `dass.json` themes (Dark Mode) │
+│      - Applies `pass.json` themes (Dark Mode) │
 │                                               │
 │  [5. Merge Engine]                            │
 │      - AST diffing and safe injection         │
