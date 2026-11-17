@@ -24,7 +24,7 @@ To understand the vision, please read the following documents:
 * [Methodology & Evaluation Plan](docs/research/Methodology.md)
 * [System Architecture](docs/architecture/SystemArchitecture.md)
 * [Roslyn Merging Strategy](docs/architecture/Roslyn_Merging.md)
-* [RFC-0001: Community Discussion](docs/rfc/RFC-0001-DASS.md)
+* [RFC-0001: Community Discussion](docs/rfc/RFC-0001-PASS.md)
 
 ## 🤝 How to Contribute Right Now
 You don't need to write C# code to help yet. We need **architects, senior .NET developers, and researchers** to review our blueprints. 
