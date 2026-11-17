@@ -1,6 +1,6 @@
 # Roslyn Merging Strategy (Safe Regeneration)
 
-The most critical feature of DASS is preventing the destruction of custom code. We will use the .NET Compiler Platform (Roslyn) to achieve this.
+The most critical feature of PASS is preventing the destruction of custom code. We will use the .NET Compiler Platform (Roslyn) to achieve this.
 
 ## The Problem
 If a developer scaffolds `Customer.cs`, they might add:
