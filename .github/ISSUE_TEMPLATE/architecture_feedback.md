@@ -1,6 +1,6 @@
 ---
 name: Architecture Feedback
-about: Provide feedback on the DASS/PASS system design, RFC, or research proposal.
+about: Provide feedback on the PASS system design, RFC, or research proposal.
 title: '[FEEDBACK] '
 labels: 'feedback, architecture'
 assignees: ''
