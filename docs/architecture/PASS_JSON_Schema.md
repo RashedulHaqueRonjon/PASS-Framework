@@ -1,12 +1,12 @@
-# `dass.json` Configuration Schema
+# `pass.json` Configuration Schema
 
-The `dass.json` file lives at the root of the ASP.NET Core project. It acts as the "Project Memory." If it does not exist, DASS creates it during the first scaffold. Every subsequent scaffold reads this file to maintain consistency.
+The `pass.json` file lives at the root of the ASP.NET Core project. It acts as the "Project Memory." If it does not exist, PASS creates it during the first scaffold. Every subsequent scaffold reads this file to maintain consistency.
 
-## Example `dass.json`
+## Example `pass.json`
 
 ```json
 {
-  "dassVersion": "1.0",
+  "passVersion": "1.0",
   "projectSettings": {
     "framework": "net8.0",
     "architecture": "MVC"
