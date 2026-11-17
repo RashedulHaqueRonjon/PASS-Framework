@@ -1,6 +1,6 @@
-# Contributing to DASS/PASS
+# Contributing to PASS
 
-First off, thank you for considering contributing to DASS/PASS! We are currently in the **Research and Request for Comments (RFC)** phase. 
+First off, thank you for considering contributing to PASS! We are currently in the **Research and Request for Comments (RFC)** phase. 
 
 ## How Can I Contribute Right Now?
 Since the source code has not been written yet, we need your brainpower, not your keyboard!
@@ -8,7 +8,7 @@ Since the source code has not been written yet, we need your brainpower, not you
 ### 1. Architectural Review (For .NET Architects)
 Please review our [System Architecture](docs/architecture/SystemArchitecture.md) and [Roslyn Merging Strategy](docs/architecture/Roslyn_Merging.md). 
 * Are there edge cases where Roslyn AST merging will fail (e.g., highly customized Razor views)?
-* How should DASS handle complex entity relationships (e.g., many-to-many join tables)?
+* How should PASS handle complex entity relationships (e.g., many-to-many join tables)?
 
 ### 2. Answer the RFC Questions
 Go to [Discussion Topics](docs/rfc/DiscussionTopics.md) and open a GitHub Issue to answer any of the questions listed there. We are particularly interested in the Developer Experience (DX).
