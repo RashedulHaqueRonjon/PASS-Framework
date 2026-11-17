@@ -1,11 +1,11 @@
-# DASS/PASS: Database/Project Aware Smart Scaffolder
-![DASS/PASS Banner](docs/images/DassPass.png)
+# PASS: Project Aware Smart Scaffolder
+![PASS Banner](docs/images/DassPass.png)
 
 [![Status](https://img.shields.io/badge/Status-Research%20%26%20RFC-blue.svg)](#)
 [![Target](https://img.shields.io/badge/Target-.NET%208-purple.svg)](#)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-**DASS/PASS** is a proposed deterministic, database-aware, project-aware, and logic-aware scaffolding framework for ASP.NET Core MVC. It is designed to extend—not replace—Microsoft’s existing scaffolding capabilities.
+**PASS** is a proposed deterministic, database-aware, project-aware, and logic-aware scaffolding framework for ASP.NET Core MVC. It is designed to extend—not replace—Microsoft’s existing scaffolding capabilities.
 
 > **Current Phase: Research & RFC (Request for Comments).** 
 > We are currently documenting the architecture, writing the research proposal, and seeking feedback from the .NET community before writing the source code.
@@ -13,10 +13,10 @@
 ## 🛑 The Problem: The "Scaffolding Paradox"
 Microsoft's default scaffolding is excellent for the first generation of code. However, in real-world iterative development, scaffolding is destructive. If your database schema changes, re-running the default scaffolder **overwrites your custom business logic, UI adjustments, and manual edits**. This forces developers to either manually update files or abandon scaffolding entirely.
 
-## 💡 The Solution: DASS/PASS
+## 💡 The Solution: PASS
 DASS sits alongside Microsoft's scaffolder. It introduces **Project Memory** and **Safe Regeneration**:
-1. **Project Memory (`dass.json`)**: Remembers your UI/UX conventions (Dark mode, Syncfusion, pagination, etc.) and applies them to all future scaffolds.
-2. **Roslyn Merging**: Instead of overwriting `Customer.cs`, DASS uses Abstract Syntax Trees (AST) to inject *only* the new database properties (e.g., `Email`, `Status`) while preserving your custom methods like `CalculateLoyaltyPoints()`.
+1. **Project Memory (`pass.json`)**: Remembers your UI/UX conventions (Dark mode, Syncfusion, pagination, etc.) and applies them to all future scaffolds.
+2. **Roslyn Merging**: Instead of overwriting `Customer.cs`, PASS uses Abstract Syntax Trees (AST) to inject *only* the new database properties (e.g., `Email`, `Status`) while preserving your custom methods like `CalculateLoyaltyPoints()`.
 
 ## 📚 Explore the Blueprint
 To understand the vision, please read the following documents:
