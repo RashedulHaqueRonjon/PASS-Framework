@@ -1,19 +1,37 @@
 ---
 name: Architecture Feedback
-about: Provide feedback on the PASS system design, RFC, or research proposal.
-title: '[FEEDBACK] '
-labels: 'feedback, architecture'
-assignees: ''
+about: Review or challenge a PASS requirement, architecture decision, research claim or proposed workflow.
+title: "[ARCHITECTURE] "
+labels: ["feedback", "architecture"]
+assignees: []
 ---
 
-**Which document are you reviewing?**
-(e.g., System Architecture, Roslyn Merging, Research Proposal)
+## Document or decision reviewed
 
-**What is your feedback?**
-(A clear and concise description of your suggestion, concern, or question.)
+<!-- Link the exact document, heading or ADR. -->
 
-**Proposed Solution / Alternative Approach**
-(If you have a specific idea on how to improve the architecture, describe it here.)
+## Scenario / requirement
 
-**Additional Context**
-(Add any other context, links, or code snippets here. Mention if you are a .NET developer, architect, or researcher.)
+<!-- Describe the concrete development scenario. -->
+
+## Feedback or concern
+
+<!-- Explain the issue, including edge cases and failure modes. -->
+
+## Suggested alternative
+
+<!-- Include a proposed design or explain why no change is needed. -->
+
+## Cross-artifact impact
+
+<!-- Could this affect pass.json, database authority, entities, DbContext, controllers, Razor, project files, tests, security or the approval workflow? -->
+
+## Evidence / references
+
+<!-- Link official documentation, code examples or research. -->
+
+## Status of the claim
+
+- [ ] Conceptual proposal
+- [ ] Implemented and reproducible (provide evidence)
+- [ ] Research result (provide protocol and data)
