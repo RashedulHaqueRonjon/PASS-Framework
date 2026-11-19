@@ -1,16 +1,21 @@
 ---
-name: RFC Discussion Topic
-about: Ask a question or start a discussion regarding RFC-0001.
-title: '[RFC] '
-labels: 'discussion, rfc'
-assignees: ''
+name: RFC Discussion
+about: Discuss an unresolved requirement or decision in RFC-0001.
+title: "[RFC] "
+labels: ["discussion", "rfc"]
+assignees: []
 ---
 
-**What topic would you like to discuss?**
-(A clear and concise summary of the topic.)
+## RFC section / question
 
-**Why is this important?**
-(Explain how this impacts the PASS project or the .NET ecosystem.)
+## Development scenario
 
-**Your Thoughts**
-(What are your opinions or suggestions on this topic?)
+## Options considered
+
+## Preferred option and reasoning
+
+## Consequences and affected components
+
+<!-- Consider database/schema authority, entity, DbContext, controller, view model, Razor/HTML, JavaScript, project file, tests, security and generation manifest. -->
+
+## Evidence or references
