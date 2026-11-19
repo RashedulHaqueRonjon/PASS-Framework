@@ -1,11 +1,11 @@
-# This disables the "Open a blank issue" option
 blank_issues_enabled: false
-
-# These appear as clickable buttons in the template chooser
 contact_links:
-  - name: 💬 Community Discussions
-    url: https://github.com/RashedulHaqueRonjon/PASS-Framework/discussions
-    about: Please ask general questions or start a discussion here.
-  - name: 🔒 Report a Security Vulnerability
+  - name: PASS RFC and architecture documents
+    url: https://github.com/RashedulHaqueRonjon/PASS-Framework/tree/main/docs
+    about: Read the current conceptual and RFC documentation before opening a discussion.
+  - name: Repository issue tracker
+    url: https://github.com/RashedulHaqueRonjon/PASS-Framework/issues
+    about: Use the available issue templates for architecture feedback and proposals.
+  - name: Report a security vulnerability privately
     url: https://github.com/RashedulHaqueRonjon/PASS-Framework/security/advisories/new
-    about: Please report security issues privately.
+    about: Do not publish credentials, secrets or exploit details in a public issue.
