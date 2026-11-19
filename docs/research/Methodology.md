@@ -1,26 +1,68 @@
-# Methodology & Evaluation Plan
+# Research Methodology
 
-## 1. Design Science Research (DSR)
-The development of PASS follows the Design Science Research methodology, which involves creating and evaluating innovative artifacts (the PASS tool and its architecture) intended to solve identified organizational problems (destructive scaffolding).
+**Status:** Proposed methodology; no empirical results have been collected.
 
-## 2. The Six Awareness Layers
-PASS is built on six interconnected awareness layers:
-1. **Project Awareness:** Reading `pass.json` to understand UI themes, libraries (e.g., Syncfusion, Bootstrap), and layout choices.
-2. **Database Awareness:** Parsing schema metadata (tables, foreign keys, data types, constraints, etc.) to generate accurate models.
-3. **Developer Awareness:** Remembering previous choices (e.g., "The developer always prefers FluentValidation over DataAnnotations").
-4. **Code Awareness:** Using Roslyn to parse existing code and ensure new generated code integrates perfectly.
-5. **Application Awareness:** Ensuring new scaffolded modules use existing DI (Dependency Injection) containers and shared services.
-6. **Incremental Awareness:** Comparing the DB schema to the existing code to calculate the "diff" before generating.
+## 1. Research approach
 
-## 3. Proposed Evaluation Metrics (Future Empirical Study)
-Once the tool is built, we will conduct a controlled experiment comparing the Microsoft Scaffolder against PASS using a medium-scale database (e.g., 20 tables).
+The project will use a Design Science Research (DSR) approach: identify a practical problem, define objectives for a solution, design and develop an artifact, demonstrate it in representative scenarios, evaluate its behaviour and communicate the results. The artifact is the PASS architecture and, later, its reference implementation.
 
-### Quantitative Metrics:
-1. **Time to Scaffold 10 Entities:** Measuring the speed of initial setup vs. subsequent setups.
-2. **Regeneration Accuracy:** Developer scaffolds `Customers`, adds a `CalculateDiscount()` method. DB adds an `Email` column. We measure how many manual lines of code must be changed post-scaffold (Microsoft will require re-writing the whole method; PASS should require 0 lines).
-3. **Maintainability Index (MI):** Using Visual Studio Code Metrics to compare the maintainability of generated code.
-4. **Cyclomatic Complexity:** Ensuring PASS's advanced features (pagination, search) do not create overly complex, unmaintainable code.
-5. **Lines of Code (LOC) Modified:** Calculating the "churn" created by standard scaffolding vs. PASS.
+The methodology must distinguish architecture validation, software verification and empirical evaluation. A successful build is not evidence of developer productivity; a positive survey is not proof of safe reconciliation.
 
-### Qualitative Metrics:
-1. **Developer Experience (DX) Survey:** A System Usability Scale (SUS) survey completed by .NET developers using both scaffolders.
+## 2. Six awareness domains
+
+1. **Project Awareness:** project structure, target framework, SDK, packages, folders, naming, conventions and project-level configuration.
+2. **Database Awareness:** SQL Server objects, schemas, columns, types, nullability, keys, constraints, relationships, indexes and supported views.
+3. **Developer/Preference Awareness:** explicitly selected personal defaults, kept distinct from shared team configuration.
+4. **Code Awareness:** syntax, symbols, references, customizations, generated markers, ownership and supported language-specific transformations. This does not imply understanding business intent.
+5. **Application Awareness:** relationships among entities, `DbContext`, controllers, services, view models, Razor views, scripts, routing, authorization and tests.
+6. **Generation-History Awareness:** prior plans, generator/template versions, schema fingerprints, manifest entries, baselines, approvals and applied transactions.
+
+Incremental scaffolding/reconciliation is a cross-cutting capability. Extensibility is a cross-cutting architecture property. Neither is an additional awareness domain.
+
+## 3. Design principles to evaluate
+
+- Read-only inspection by default.
+- Database-first authority for the initial mode.
+- Dependency-impact analysis in response to changes to any tracked artifact.
+- A probable-outcome plan before candidate code generation.
+- Explicit approval before candidate preparation and separate approval before project application.
+- No silent change, even for formatting, metadata or apparently insignificant updates.
+- Stop/report on ambiguous, destructive or unsupported conflicts.
+- Reproducible plans and generated output for equivalent inputs.
+- Rollback limited to the exact approved transaction and its recorded backups.
+
+## 4. Evaluation dimensions
+
+### 4.1 Correctness and impact coverage
+
+Measure whether the planner identifies all expected impacted artifacts and avoids proposing unrelated changes. Classify true positives, false positives, true negatives and false negatives by scenario.
+
+### 4.2 Preservation and conflict handling
+
+Introduce controlled developer modifications, then perform schema and project changes. Measure preserved customizations, detected conflicts, missed conflicts and unintended data loss. The target for silent loss of developer changes is zero.
+
+### 4.3 Productivity and usability
+
+Measure end-to-end task time, configuration re-entry, manual edits, review effort and conflict-resolution time. Use a structured usability instrument such as the System Usability Scale only with a documented participant protocol.
+
+### 4.4 Performance and resource use
+
+Measure planning time, candidate preparation time, validation time, apply time, CPU and memory. Separate planning, code generation, compilation and test execution rather than reporting a single unexplained time.
+
+### 4.5 Reproducibility
+
+Repeat equivalent runs with identical database snapshots, project files, configuration, package lock state, generator version and template version. Compare plan identifiers/content hashes and generated outputs.
+
+## 5. Baselines
+
+Use three distinct comparison conditions where applicable:
+
+- Standard Microsoft tooling with its normal supported options.
+- Microsoft-supported customization facilities, such as partial classes and T4 templates for EF Core reverse engineering.
+- PASS prototype with explicit planning, approval, manifest and reconciliation.
+
+Do not compare a deliberately weak baseline with a fully optimized PASS configuration. Give each approach equivalent requirements, time, project inputs and feature scope.
+
+## 6. Reporting
+
+Report scenario definitions, tool and SDK versions, hardware, operating system, database provider/version, repetitions, raw observations, exclusions, summary statistics, confidence intervals where appropriate, and threats to validity. Preserve scripts and sample inputs so another researcher can reproduce the experiment.
