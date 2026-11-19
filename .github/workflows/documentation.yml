@@ -1,0 +1,65 @@
+name: Documentation checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.md"
+      - "**.json"
+      - ".github/workflows/documentation.yml"
+  pull_request:
+    paths:
+      - "**.md"
+      - "**.json"
+      - ".github/workflows/documentation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON syntax and local Markdown links
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, re, sys
+          from pathlib import Path
+          from urllib.parse import unquote
+
+          root = Path.cwd()
+          errors = []
+          for file in root.rglob("*.json"):
+              if any(part in {".git", "node_modules", "bin", "obj"} for part in file.parts):
+                  continue
+              try:
+                  json.loads(file.read_text(encoding="utf-8"))
+              except Exception as exc:
+                  errors.append(f"Invalid JSON {file.relative_to(root)}: {exc}")
+
+          link_pattern = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
+          for md in root.rglob("*.md"):
+              if ".git" in md.parts:
+                  continue
+              body = md.read_text(encoding="utf-8")
+              for raw in link_pattern.findall(body):
+                  target = raw.strip().split()[0].strip("<>")
+                  if not target or target.startswith(("http://", "https://", "mailto:", "#", "data:")):
+                      continue
+                  path_part = unquote(target.split("#", 1)[0].split("?", 1)[0])
+                  if not path_part:
+                      continue
+                  candidate = (md.parent / path_part).resolve()
+                  if not candidate.exists():
+                      errors.append(f"Broken local link in {md.relative_to(root)}: {target}")
+
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+          print("JSON syntax and local Markdown links are valid.")
+          PY
