@@ -39,7 +39,7 @@ Use immutable request/result models where practical. Providers should return str
 
 `PASS.Abstractions` should be the lowest-level shared contract assembly. `PASS.Core` depends on abstractions. Database and EF Core adapters implement provider contracts. MVC generators consume normalized project/schema/configuration models. CLI and VSIX depend on application services, not on each other's UI code.
 
-Avoid circular project references. A component may publish capability metadata so the planner can determine whether a requested feature is supported.
+Circular project references are to be avoided. A component may publish capability metadata so the planner can determine whether a requested feature is supported.
 
 ## 4. Candidate versus application boundaries
 
@@ -51,4 +51,4 @@ Diagnostics should include a stable code, severity, affected artifact, explanati
 
 ## 6. Future extension points
 
-Future provider adapters may support PostgreSQL or other databases. Future generators may support API projects or alternative UI stacks. Extension discovery must be explicit, versioned and trusted; templates/extensions must not execute arbitrary code merely because they are present in a repository.
+Future provider adapters may support other databases like PostgreSQL, My SQL, and Excel or Text file tables. Future generators may support API projects or alternative UI stacks. Extension discovery must be explicit, versioned and trusted; templates/extensions must not execute arbitrary code merely because they are present in a repository.
