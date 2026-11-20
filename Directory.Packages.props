@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <!--
+    Intentionally no package versions are declared during the conceptual phase.
+    Add centrally managed versions only after the implementation's dependency
+    matrix has been reviewed and tested. Keep VSIX-specific dependencies scoped
+    to the VSIX project where necessary.
+  -->
+</Project>
