@@ -51,4 +51,4 @@ Diagnostics should include a stable code, severity, affected artifact, explanati
 
 ## 6. Future extension points
 
-Future provider adapters may support other databases like PostgreSQL, My SQL, and Excel or Text file tables. Future generators may support API projects or alternative UI stacks. Extension discovery must be explicit, versioned and trusted; templates/extensions must not execute arbitrary code merely because they are present in a repository.
+Future provider adapters may support other databases like PostgreSQL, Oracle, MySQL, and Excel or Text file tables. Future generators may support API projects or alternative UI stacks. Extension discovery must be explicit, versioned and trusted; templates/extensions must not execute arbitrary code merely because they are present in a repository.
