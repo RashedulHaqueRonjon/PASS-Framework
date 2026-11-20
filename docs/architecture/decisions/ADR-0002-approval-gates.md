@@ -13,7 +13,7 @@ PASS uses two approval gates:
 
 1. A read-only plan and probable-outcome report is produced before source-code generation.
 2. An authorized user approves candidate preparation in isolated staging.
-3. The exact diff and validation report are shown.
+3. The exact diff (difference) and validation report are shown.
 4. An authorized user separately approves application of the exact candidate hashes and listed operations.
 
 No project or database mutation occurs without approval. A generic `--yes` cannot bypass the gates. CI requires a trusted approval record or protected environment gate bound to the plan digest.
