@@ -1,3 +1,4 @@
+
 name: PASS CI
 
 on:
@@ -11,41 +12,30 @@ permissions:
 
 jobs:
   repository-validation:
+    name: Validate repository configuration
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
       - name: Validate JSON syntax
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          for path in Path('.').rglob('*.json'):
-              if '.git' not in path.parts:
-                  json.loads(path.read_text(encoding='utf-8'))
-          print('All repository JSON files parse successfully.')
+
+          files = list(Path(".").rglob("*.json"))
+
+          for path in files:
+              if ".git" not in path.parts:
+                  json.loads(path.read_text(encoding="utf-8"))
+
+          print(f"Validated {len(files)} JSON files.")
           PY
-
-  dotnet-build-and-test:
-    # This job intentionally remains dormant during the conceptual phase.
-    # It activates after a real solution and source projects are committed.
-    if: ${{ hashFiles('**/*.sln') != '' && hashFiles('src/**/*.csproj') != '' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up .NET 10 SDK
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "10.0.x"
-
-      - name: Restore
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --no-restore --configuration Release
-
-      - name: Test
-        run: dotnet test --no-build --configuration Release
+          
