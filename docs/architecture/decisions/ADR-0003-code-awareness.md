@@ -9,7 +9,7 @@
 
 ## Decision
 
-Use **Code Awareness** in the current PASS model. It covers syntax, symbols, references, code conventions, customizations, generated markers and artifact ownership. Do not claim that PASS understands the developer's business logic or can infer intent.
+**Code Awareness** is used in the current PASS model. It covers syntax, symbols, references, code conventions, customizations, generated markers and artifact ownership. It is not claimy that PASS understands the developer's business logic or can infer intent.
 
 A future Logic Awareness feature may be researched only after a method for expressing business rules and mapping specifications to code has been defined. Any AI-assisted interpretation must remain reviewable, evidence-backed and subject to human approval.
 
