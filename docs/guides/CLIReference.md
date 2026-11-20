@@ -11,7 +11,6 @@ dotnet pass inspect --project .\MyApp\MyApp.csproj
 dotnet pass plan add --table dbo.Customer --project .\MyApp\MyApp.csproj
 dotnet pass plan sync --entity Customer
 dotnet pass plan adopt --entity Customer
-dotnet pass doctor
 ```
 
 `plan` must not create candidate source files or modify the target project/database. It displays the impacted artifacts, proposed operations, probable outcome, risks, assumptions and conflicts.
