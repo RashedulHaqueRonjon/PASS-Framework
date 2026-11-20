@@ -1,4 +1,4 @@
-# Sample: BasicMvc.SqlServer
+# Sample: BasicMVC.SqlServer
 
 **Status:** Planned reconstruction sample; not implemented.
 
@@ -13,7 +13,7 @@ The repository contains PASS and Microsoft screenshot files for Customer List, C
 ## Planned contents
 
 ```text
-BasicMvc.SqlServer/
+BasicMVC.SqlServer/
 ├── Database/
 │   ├── Schema.sql
 │   └── SeedData.sql
