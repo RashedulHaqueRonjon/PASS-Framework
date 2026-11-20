@@ -1,0 +1,41 @@
+# Build output
+**/bin/
+**/obj/
+**/out/
+**/TestResults/
+artifacts/
+
+# IDE / user state
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# PASS local runtime state (do not ignore shared pass.json)
+.pass/staging/
+.pass/temp/
+.pass/cache/
+.pass/local-secrets.json
+
+# Local configuration and secrets
+appsettings.*.local.json
+.env
+.env.*
+!.env.example
+secrets.json
+
+# OS noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
