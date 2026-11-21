@@ -1,6 +1,6 @@
 # Research Methodology
 
-**Status:** Proposed methodology; no empirical results have been collected.
+**Status:** Proposed methodology; no empirical results have been collected. For definitions of research-methodology and technical terminology, refer to the [PASS Glossary and Technical Terminology](../Glossary.md).
 
 ## 1. Research approach
 
