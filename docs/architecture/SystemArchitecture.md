@@ -24,27 +24,64 @@ The CLI is the first planned interface. A Visual Studio extension may later call
 ## 3. High-level pipeline
 
 ```mermaid
+
 flowchart TD
-    A[CLI / future VS integration] --> B[PASS Orchestrator]
-    B --> C[Project Inspector - read only]
-    B --> D[Database Provider - read only]
-    B --> E[Configuration Resolver]
-    C --> F[Project Model]
-    D --> G[Normalized Schema Model]
-    E --> H[Resolved PASS Profile]
-    F --> I[Dependency Graph and Impact Planner]
+    A["CLI / Future VSIX"]
+    B["PASS<br/>Orchestrator"]
+
+    subgraph INSPECTION["1. Read-only Inspection"]
+        direction LR
+        C["Project<br/>Inspector"]
+        D["Database<br/>Provider"]
+        E["Configuration<br/>Resolver"]
+    end
+
+    F["Normalized<br/>Project Model"]
+    G["Normalized<br/>Schema Model"]
+    H["Resolved<br/>PASS Profile"]
+    I["Dependency<br/>Graph<br/>and<br/>Impact Planner"]
+    J["Execution Plan<br/>and<br/>Probable<br/>Outcome Report"]
+K{"1stApproval<br/>Prepare<br/>Candidates?"}
+    L["Stop<br/>No Generation"]
+    M["Candidate<br/>Generator:<br/>Isolated<br/>Workspace"]
+    N["Reconciliation<br/>and<br/>Exact Diff"]
+    O["Validation<br/>and<br/>Risk Report"]
+    P{"2nd Approval:<br/>Apply<br/>Exact Changes?"}
+    Q["Keep Target<br/>Unchanged"]
+    R["Transactional<br/>File<br/>Application"]
+    S["Manifest<br/>and<br/>Audit"]
+T["Recovery<br/>or<br/>Rollback<br/>Record"]
+
+    A --> B
+
+    B --> C
+    B --> D
+    B --> E
+
+    C --> F
+    D --> G
+    E --> H
+
+    F --> I
     G --> I
     H --> I
-    I --> J[Execution Plan and Probable Outcome Report]
-    J --> K{Approval: prepare candidates?}
-    K -- No --> L[Stop; no generation or project mutation]
-    K -- Yes --> M[Isolated Candidate Generator]
-    M --> N[Reconciliation and Exact Diff]
-    N --> O[Validation and Risk Report]
-    O --> P{Separate approval: apply exact diff?}
-    P -- No --> Q[Project remains unchanged]
-    P -- Yes --> R[Transactional File Applier]
-    R --> S[Manifest, Audit and Rollback Record]
+
+    I --> J
+    J --> K
+
+    K -- No --> L
+    K -- Yes --> M
+
+    M --> N
+    N --> O
+    O --> P
+
+    P -- No --> Q
+    P -- Yes --> R
+
+    R --> S
+    R --> T
+
 ```
 
 ## 4. Core stages
