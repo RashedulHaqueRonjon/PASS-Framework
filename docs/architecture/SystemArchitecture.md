@@ -1,6 +1,7 @@
 # PASS System Architecture
 
-**Status:** Conceptual architecture; not implemented.
+**Status:** Conceptual architecture; not implemented. For definitions of architectural concepts, technical abbreviations and PASS-specific terminology, refer to the [PASS Glossary and Technical Terminology](../Glossary.md).
+
 
 ## 1. Architectural objective
 
@@ -24,7 +25,6 @@ The CLI is the first planned interface. A Visual Studio extension may later call
 ## 3. High-level pipeline
 
 ```mermaid
-
 flowchart TD
     A["CLI / Future VSIX"]
     B["PASS<br/>Orchestrator"]
@@ -41,7 +41,7 @@ flowchart TD
     H["Resolved<br/>PASS Profile"]
     I["Dependency<br/>Graph<br/>and<br/>Impact Planner"]
     J["Execution Plan<br/>and<br/>Probable<br/>Outcome Report"]
-K{"1stApproval<br/>Prepare<br/>Candidates?"}
+    K{"1st Approval<br/>Prepare<br/>Candidates?"}
     L["Stop<br/>No Generation"]
     M["Candidate<br/>Generator:<br/>Isolated<br/>Workspace"]
     N["Reconciliation<br/>and<br/>Exact Diff"]
@@ -50,7 +50,7 @@ K{"1stApproval<br/>Prepare<br/>Candidates?"}
     Q["Keep Target<br/>Unchanged"]
     R["Transactional<br/>File<br/>Application"]
     S["Manifest<br/>and<br/>Audit"]
-T["Recovery<br/>or<br/>Rollback<br/>Record"]
+    T["Recovery<br/>or<br/>Rollback<br/>Record"]
 
     A --> B
 
@@ -81,7 +81,6 @@ T["Recovery<br/>or<br/>Rollback<br/>Record"]
 
     R --> S
     R --> T
-
 ```
 
 ## 4. Core stages
