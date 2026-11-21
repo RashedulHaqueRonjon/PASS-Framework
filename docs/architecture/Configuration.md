@@ -11,15 +11,15 @@ Do not store passwords, access tokens, private certificates or full connection s
 | Information | Authoritative source in initial mode |
 |---|---|
 | Database tables, columns, keys and relationships | Live SQL Server database schema (database-first) |
-| PASS generation preferences and policy | `pass.json` |
+| PASS generation preferences and policies | `pass.json` |
 | Target framework and project references | `.csproj` / imported MSBuild files |
 | SDK selection | `global.json` and installed SDK policy |
 | Team-wide NuGet versions | `Directory.Packages.props` where central package management is used |
-
-For current ASP.NET Core projects, the project definition is normally the MSBuild **`.csproj`** file. The old `project.json` project format belongs to earlier .NET Core tooling and is not the planned baseline. PASS may detect legacy projects as a separate adoption/compatibility case, but must not treat `project.json` as the current project file or silently migrate it.
 | Existing developer customizations | Current user files compared with recorded baseline/manifest |
 | Generated provenance | PASS manifest and baseline store |
-| Business intent | Explicit developer requirements; not inferred in MVP |
+| Business intent | Explicit developer requirements; not inferred |
+
+For current ASP.NET Core projects, the project definition is normally the MSBuild `.csproj` file. The legacy `project.json` project format belongs to earlier .NET Core tooling and is not the planned baseline. PASS may detect legacy projects as a separate adoption/compatibility case, but must not treat `project.json` as the current project file or silently migrate it.
 
 ## 3. Configuration precedence
 
