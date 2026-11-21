@@ -8,7 +8,9 @@ The project will use a Design Science Research (DSR) approach: identify a practi
 
 The methodology must distinguish architecture validation, software verification and empirical evaluation. A successful build is not evidence of developer productivity; a positive survey is not proof of safe reconciliation.
 
-## 2. Six awareness domains
+## 2. Awareness domains and capabilities
+
+### 2.1 Awareness domains
 
 1. **Project Awareness:** project structure, target framework, SDK, packages, folders, naming, conventions and project-level configuration.
 2. **Database Awareness:** SQL Server objects, schemas, columns, types, nullability, keys, constraints, relationships, indexes and supported views.
@@ -17,7 +19,10 @@ The methodology must distinguish architecture validation, software verification 
 5. **Application Awareness:** relationships among entities, `DbContext`, controllers, services, view models, Razor views, scripts, routing, authorization and tests.
 6. **Generation-History Awareness:** prior plans, generator/template versions, schema fingerprints, manifest entries, baselines, approvals and applied transactions.
 
-Incremental scaffolding/reconciliation is a cross-cutting capability. Extensibility is a cross-cutting architecture property. Neither is an additional awareness domain.
+### 2.2 Capabilities
+
+1. **Incremental Scaffolding and Reconciliation:** A cross-cutting capability, compares the current application and database with their previous generation state, then creates a safe incremental generation plan.
+2. **Extensible Architecture:** A cross-cutting architecture property, allows the addition of database providers, templates, UI frameworks, IDE integrations and external generators.
 
 ## 3. Design principles to evaluate
 
