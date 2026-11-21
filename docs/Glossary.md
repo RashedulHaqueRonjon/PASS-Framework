@@ -13,6 +13,14 @@ Its purpose is to maintain consistent terminology and make the research, archite
 
 | Term | Full Form | Definition |
 |---|---|---|
+| .NET | .NET Platform | Microsoft's development platform for building and running applications and services. |
+| C# | C Sharp | A programming language commonly used for developing .NET applications. |
+| HTML | HyperText Markup Language | The standard markup language for structuring web content. |
+| MSBuild | Microsoft Build Engine | The build platform used by .NET projects to evaluate project files and execute build processes. |
+| NuGet | NuGet Package Manager | The package-management system used by .NET projects to consume and distribute libraries. |
+| T4 | Text Template Transformation Toolkit | A template-based code-generation technology used in Visual Studio and supported .NET development workflows. |
+| YAML | YAML Ain't Markup Language | A human-readable data serialization format commonly used for configuration files and CI/CD workflows. |
+| DSR | Design Science Research | A research approach focused on designing, developing and evaluating artifacts to address practical problems. |
 | ADR | Architecture Decision Record | A document recording an important architectural decision, its context and consequences. |
 | API | Application Programming Interface | A defined interface through which software components communicate. |
 | AST | Abstract Syntax Tree | A tree representation of source-code syntax used for analysis and transformation. |
@@ -28,14 +36,14 @@ Its purpose is to maintain consistent terminology and make the research, archite
 | JSON | JavaScript Object Notation | A structured text format commonly used for configuration and data exchange. |
 | LTS | Long-Term Support | A software release-support designation providing an extended support period. |
 | MVC | Model-View-Controller | An architectural pattern separating application data, presentation and request-handling responsibilities. |
-| MVP | Minimum Viable Product | The smallest usable product that provides sufficient functionality to evaluate its core value. |
+| MVP | Minimum Viable Product | The smallest implementation that contains sufficient functionality to demonstrate and evaluate the central value proposition of a proposed product. |
 | ORM | Object-Relational Mapper | A technology that maps relational database structures to programming-language objects. |
 | RFC | Request for Comments | A document proposing a design or specification for review and discussion. |
 | SDK | Software Development Kit | A collection of tools and libraries used to develop software for a particular platform. |
 | SQL | Structured Query Language | A language used to define, query and manipulate relational databases. |
-| STS | Standard-Term Support | A release-support designation with a shorter support period than LTS. |
+| STS | Standard Term Support | A release-support designation with a shorter support period than LTS. |
 | UI | User Interface | The visual and interactive elements through which users interact with an application. |
-| VSIX | Visual Studio Extension Package | The package format used to distribute Visual Studio extensions. |
+| VSIX | Visual Studio Extension | A package format used to distribute and install extensions for Microsoft Visual Studio. |
 | XML | Extensible Markup Language | A structured markup format used for configuration and data representation. |
 
 ## B. Microsoft and .NET Technologies
@@ -125,6 +133,10 @@ The designated authoritative source for a particular category of information.
 For example, in PASS database-first mode, the live SQL Server schema is authoritative for database structure.
 
 ## D. PASS-Specific Concepts
+
+### DASS
+
+Database Aware Smart Scaffolder, an earlier working name associated with the project. PASS (Project Aware Smart Scaffolder) is the current project name.
 
 ### Developer/Preference Awareness
 
