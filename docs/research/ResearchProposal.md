@@ -2,9 +2,9 @@
 
 **Full name:** Project Aware Smart Scaffolder (PASS)  
 **Author:** Rashedul Haque Ronjon  
-**Status:** Conceptual research proposal / pre-implementatin   
+**Status:** Conceptual research proposal / pre-implementation   
 **Primary domain:** Database-first ASP.NET Core MVC development   
-**Terminology:** Reference to the [PASS Glossary and Technical Terminology](../Glossary.md) for definitions of abbreviations and specialist terminology used in this proposal 
+**Terminology:** Refer to the [PASS Glossary and Technical Terminology](../Glossary.md) for definitions of abbreviations and specialist terminology used in this proposal 
 
 ## Abstract
 
