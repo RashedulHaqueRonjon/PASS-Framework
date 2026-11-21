@@ -10,7 +10,7 @@ The methodology must distinguish architecture validation, software verification 
 
 ## 2. Awareness domains and capabilities
 
-### 2.1 Awareness domains
+### 2.1 Six awareness domains
 
 1. **Project Awareness:** project structure, target framework, SDK, packages, folders, naming, conventions and project-level configuration.
 2. **Database Awareness:** SQL Server objects, schemas, columns, types, nullability, keys, constraints, relationships, indexes and supported views.
