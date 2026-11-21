@@ -59,7 +59,7 @@ The reconstructed application should reproduce the available screenshots as clos
 
 ## 6. Comparison requirements
 
-It is intended to use the same database schema, data, application framework, UI requirements and execution environment when comparing the two approaches at the the time of actual development.
+The same database schema, data, application framework, UI requirements and execution environment should be used when comparing the two approaches during actual development.
 
 Record differences in:
 
