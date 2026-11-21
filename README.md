@@ -39,29 +39,33 @@ The preferred development baseline is .NET 10 LTS. .NET 11 STS compatibility may
 ```mermaid
 
 flowchart TD
-    A["CLI / Visual Studio<br/>Entry Points"]
-    B["PASS Orchestrator"]
+    A["CLI<br/>or<br/>Visual Studio<br/>Entry Points"]
+
+    B["PASS<br/>Orchestrator"]
 
     C["Inspect Project<br/>(Read-only)"]
-    D["Inspect Database<br/>(Read-only)"]
-    E["Resolve pass.json<br/>and Policies"]
+    D["Inspect<br/>Database<br/>(Read-only)"]
+E["Resolve<br/>pass.json<br/>and<br/>Policies"]
 
-    F["Project Model"]
-    G["Database Schema Model"]
-    H["Resolved Configuration"]
+    F["Project<br/>Model"]
+    G["Database<br/>Schema<br/>Model"]
+    H["Resolved<br/>Configuration"]
 
-    I["Dependency Graph<br/>and Impact Analysis"]
-    J["Execution Plan<br/>and Outcome Report"]
+    I["Dependency<br/>Graph<br/>and<br/>Impact Analysis"]
 
-    K{"Approve<br/>Candidate Preparation?"}
+    J["Execution Plan<br/>and<br/>Outcome Report"]
+
+    K{"Approve<br/>Candidate<br/>Preparation?"}
+
     L["Stop<br/>No Changes"]
-    M["Generate Candidates<br/>in Isolated Staging"]
 
-    N["Review Exact Diff<br/>and Validation Results"]
+M["Generate<br/>Candidates<br/>in<br/>Isolated Staging"]
+
+    N["Review<br/>Exact Diff<br/>and<br/>Validation Results"]
     O{"Approve<br/>Application?"}
     P["Retain Candidates<br/>Target Unchanged"]
     Q["Apply Approved<br/>Changes"]
-    R["Manifest, Audit<br/>and Rollback Record"]
+    R["Manifest, Audit<br/>and<br/>Rollback Record"]
 
     A --> B
 
