@@ -101,6 +101,7 @@ See [System Architecture](docs/architecture/SystemArchitecture.md), [Component A
 
 ## Documentation map
 
+- [Glossary and technical terminology](docs/Glossary.md)
 - [Research proposal](docs/research/ResearchProposal.md)
 - [Methodology](docs/research/Methodology.md)
 - [Evaluation protocol](docs/research/EvaluationProtocol.md)
