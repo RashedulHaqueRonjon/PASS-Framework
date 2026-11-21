@@ -1,6 +1,8 @@
 # PASS Developer Guide (Planned)
 
-**Status:** Architecture guidance only; no code projects or public APIs exist yet.
+**Status:** Architecture guidance only; no code projects or public APIs exist yet. 
+For definitions of technical terminology, abbreviations and PASS-specific concepts used in this guide, refer to the [PASS Glossary and Technical Terminology](../Glossary.md).
+
 
 ## 1. Solution boundaries
 
