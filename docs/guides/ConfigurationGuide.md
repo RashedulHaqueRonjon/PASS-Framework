@@ -1,6 +1,7 @@
 # PASS Configuration Guide (Proposed)
 
-**Status:** Conceptual. See [PASS JSON Schema](../architecture/PASS_JSON_Schema.md) and [`pass.schema.json`](../architecture/pass.schema.json).
+**Status:** Conceptual. See [PASS JSON Schema](../architecture/PASS_JSON_Schema.md) and [`pass.schema.json`](../architecture/pass.schema.json). For definitions of configuration-related terminology and abbreviations, refer to the [PASS Glossary and Technical Terminology](../Glossary.md).
+
 
 ## 1. Where the profile belongs
 
