@@ -1,6 +1,7 @@
 # PASS User Guide (Proposed Workflow)
 
-**Status:** Conceptual guide; PASS is not yet implemented. The commands below are proposed interface examples, not currently executable commands.
+**Status:** Conceptual guide; PASS is not yet implemented. The commands below are proposed interface examples, not currently executable commands. For explanations of technical terms and PASS-specific terminology used in this guide, see the [PASS Glossary and Technical Terminology](../Glossary.md).
+
 
 ## 1. Intended user workflow
 
