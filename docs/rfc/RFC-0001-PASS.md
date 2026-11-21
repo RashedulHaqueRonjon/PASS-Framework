@@ -5,6 +5,7 @@
 - **Original draft history:** Earlier project notes may predate the public repository; preserve verified original dates separately.
 - **Current repository:** https://github.com/RashedulHaqueRonjon/PASS-Framework
 - **Target:** Database-first ASP.NET Core MVC applications
+- **Terminology:** [PASS Glossary and Technical Terminology](../Glossary.md)
 
 ## 1. Summary
 
