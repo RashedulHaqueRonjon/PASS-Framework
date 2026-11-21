@@ -30,7 +30,7 @@ The problem includes:
 5. Insufficiently explicit planning, authorization, conflict handling and rollback before changes are applied.
 6. Difficulty reproducing generation results across team members and environments.
 
-This statement is deliberately narrower and more testable than claiming that all Microsoft scaffolding is destructive.
+This formulation avoids attributing destructive behaviour to all Microsoft scaffolding workflows. Instead, it focuses the research on the specific challenges of project-wide configuration consistency, cross-artifact impact analysis, generated-code provenance, developer customization preservation and controlled regeneration.
 
 ## 3. Aim and objectives
 
@@ -65,7 +65,7 @@ Incremental scaffolding is a system capability spanning the awareness domains. E
 
 ## 5. Scope and assumptions
 
-The initial conceptual/MVP scope is conventional ASP.NET Core MVC, SQL Server and EF Core. Database-first is the only initial source-of-truth mode. The live database schema is authoritative for database structure; generated EF Core entities and mappings are derived application artifacts. PASS must not execute DDL or migrations against a database as part of normal scaffolding.
+The initial research and implementation scope is conventional ASP.NET Core MVC, SQL Server and EF Core. Database-first is the only initial source-of-truth mode. The live database schema is authoritative for database structure; generated EF Core entities and mappings are derived application artifacts. PASS must not execute DDL or migrations against a database as part of normal scaffolding.
 
 A future migrations-first mode may be studied separately. It must select EF Core migrations/model snapshot as the authority and use the live database for drift detection. PASS must not silently combine database-first and migrations-first authority.
 
