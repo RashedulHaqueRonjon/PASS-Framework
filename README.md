@@ -37,7 +37,6 @@ The preferred development baseline is .NET 10 LTS. .NET 11 STS compatibility may
 ## Architecture at a glance
 
 ```mermaid
-
 flowchart TD
     A["CLI<br/>or<br/>Visual Studio<br/>Entry Points"]
 
@@ -45,7 +44,7 @@ flowchart TD
 
     C["Inspect Project<br/>(Read-only)"]
     D["Inspect<br/>Database<br/>(Read-only)"]
-E["Resolve<br/>pass.json<br/>and<br/>Policies"]
+    E["Resolve<br/>pass.json<br/>and<br/>Policies"]
 
     F["Project<br/>Model"]
     G["Database<br/>Schema<br/>Model"]
@@ -59,7 +58,7 @@ E["Resolve<br/>pass.json<br/>and<br/>Policies"]
 
     L["Stop<br/>No Changes"]
 
-M["Generate<br/>Candidates<br/>in<br/>Isolated Staging"]
+    M["Generate<br/>Candidates<br/>in<br/>Isolated Staging"]
 
     N["Review<br/>Exact Diff<br/>and<br/>Validation Results"]
     O{"Approve<br/>Application?"}
@@ -94,7 +93,6 @@ M["Generate<br/>Candidates<br/>in<br/>Isolated Staging"]
     O -- Yes --> Q
 
     Q --> R
-
 ```
 
 See [System Architecture](docs/architecture/SystemArchitecture.md), [Component Architecture](docs/architecture/ComponentArchitecture.md), and [Reconciliation and Merging](docs/architecture/ReconciliationAndMerging.md).
