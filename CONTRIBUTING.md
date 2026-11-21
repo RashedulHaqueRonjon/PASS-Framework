@@ -6,6 +6,8 @@ Thank you for considering a contribution to PASS (Project Aware Smart Scaffolder
 
 PASS is in the **conceptual research and RFC phase**. The architecture and requirements are being discussed; the proposed source-code projects are not implemented yet. Please do not interpret proposed commands, components, diagrams or screenshots as a released product.
 
+For terminology and abbreviations used throughout the project, contributors should consult the [PASS Glossary and Technical Terminology](docs/Glossary.md) to maintain consistent interpretation and usage across documentation and future implementation.
+
 ## Useful contributions now
 
 - Review the research questions and related-work coverage.
