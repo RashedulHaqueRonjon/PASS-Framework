@@ -60,7 +60,7 @@ Run EF Core reverse engineering and MVC controller/view scaffolding as separate 
 - **Reproducibility:** proportion of repeated identical-input runs producing equivalent plans and outputs.
 - **Build/test outcome:** compilation and relevant functional/security test results after application.
 
-- ## 6. Repetition and analysis
+## 6. Repetition and analysis
 
 Use repeated runs sufficient to characterize variability. Report median, interquartile range and/or mean and standard deviation as suitable. Select inferential tests only after considering sample size, distribution and paired/unpaired design. For developer studies, justify participant recruitment and sample size, obtain appropriate consent, and document survey instruments.
 
