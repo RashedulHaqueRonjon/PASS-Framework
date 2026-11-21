@@ -37,26 +37,60 @@ The preferred development baseline is .NET 10 LTS. .NET 11 STS compatibility may
 ## Architecture at a glance
 
 ```mermaid
+
 flowchart TD
-    A[CLI / future Visual Studio integration] --> B[PASS Orchestrator]
-    B --> C[Read-only project inspection]
-    B --> D[Read-only database inspection]
-    B --> E[pass.json and policy resolution]
-    C --> F[Normalized project model]
-    D --> G[Normalized schema model]
-    E --> H[Resolved configuration]
-    F --> I[Dependency and impact analysis]
+    A["CLI / Visual Studio<br/>Entry Points"]
+    B["PASS Orchestrator"]
+
+    C["Inspect Project<br/>(Read-only)"]
+    D["Inspect Database<br/>(Read-only)"]
+    E["Resolve pass.json<br/>and Policies"]
+
+    F["Project Model"]
+    G["Database Schema Model"]
+    H["Resolved Configuration"]
+
+    I["Dependency Graph<br/>and Impact Analysis"]
+    J["Execution Plan<br/>and Outcome Report"]
+
+    K{"Approve<br/>Candidate Preparation?"}
+    L["Stop<br/>No Changes"]
+    M["Generate Candidates<br/>in Isolated Staging"]
+
+    N["Review Exact Diff<br/>and Validation Results"]
+    O{"Approve<br/>Application?"}
+    P["Retain Candidates<br/>Target Unchanged"]
+    Q["Apply Approved<br/>Changes"]
+    R["Manifest, Audit<br/>and Rollback Record"]
+
+    A --> B
+
+    B --> C
+    B --> D
+    B --> E
+
+    C --> F
+    D --> G
+    E --> H
+
+    F --> I
     G --> I
     H --> I
-    I --> J[Read-only execution plan]
-    J --> K{Authorized approval to prepare?}
-    K -- No --> L[No generation and no project changes]
-    K -- Yes --> M[Generate candidate in isolated staging]
-    M --> N[Exact diff, validation and outcome report]
-    N --> O{Separate approval to apply?}
-    O -- No --> P[Discard/retain staging per policy; project unchanged]
-    O -- Yes --> Q[Apply approved transaction]
-    Q --> R[Audit manifest and rollback record]
+
+    I --> J
+    J --> K
+
+    K -- No --> L
+    K -- Yes --> M
+
+    M --> N
+    N --> O
+
+    O -- No --> P
+    O -- Yes --> Q
+
+    Q --> R
+
 ```
 
 See [System Architecture](docs/architecture/SystemArchitecture.md), [Component Architecture](docs/architecture/ComponentArchitecture.md), and [Reconciliation and Merging](docs/architecture/ReconciliationAndMerging.md).
