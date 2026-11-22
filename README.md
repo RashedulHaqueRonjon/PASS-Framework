@@ -4,7 +4,7 @@
 
 [![Status](https://img.shields.io/badge/Status-Research%20%26%20RFC-blue)](docs/research/ResearchProposal.md)
 [![Primary baseline](https://img.shields.io/badge/Primary%20baseline-.NET%2010%20LTS-purple)](docs/architecture/SystemArchitecture.md)
-[![Code license](https://img.shields.io/badge/Code%20license-Apache%202.0-blue)](LICENSE) [![Docs license](https://img.shields.io/badge/Docs%20license-CC%20BY%204.0-lightgrey)](docs/LICENSE)(https://img.shields.io/badge/License-Apache%202.0-blue)](LICENSE)
+[![Code license](https://img.shields.io/badge/Code%20license-Apache%202.0-blue)](LICENSE) [![Docs license](https://img.shields.io/badge/Docs%20license-CC%20BY%204.0-lightgrey)](docs/LICENSE)
 
 **PASS (Project Aware Smart Scaffolder)** is a proposed, deterministic, database-aware and project-aware scaffolding and change-reconciliation framework for database-first ASP.NET Core MVC applications. PASS is intended to complement—not replace—Microsoft's existing tooling.
 
@@ -148,4 +148,4 @@ This repository uses two licenses:
 - **Source code and all other files outside `docs/`:** [Apache License 2.0](LICENSE).
 - **Documentation (`docs/`):** [Creative Commons Attribution 4.0 International (CC BY 4.0)](docs/LICENSE), except the machine-readable [`pass.schema.json`](docs/architecture/pass.schema.json), which is Apache 2.0 so tools can use it freely.
 
-Copyright © 2026 [your full legal name]. When reusing the documentation, please credit "PASS — Project Aware Smart Scaffolder" and link to this repository.
+Copyright © 2026 Rashedul Haque Ronjon. When reusing the documentation, please credit "PASS — Project Aware Smart Scaffolder" and link to this repository.
