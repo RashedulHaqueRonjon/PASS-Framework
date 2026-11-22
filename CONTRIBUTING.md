@@ -37,6 +37,10 @@ When implementation begins, the project will add compiler/build requirements, co
 
 Material decisions should be recorded as Architecture Decision Records (ADRs) under `docs/architecture/decisions/`. Accepted decisions should be reflected consistently in the README, RFC, architecture documents, guides, configuration schema and tests.
 
+## License of contributions
+
+By submitting a contribution, you agree that it is licensed under the license that the [README](README.md#license) lists for the files you change.
+
 ## Code of Conduct
 
 All contributors must follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
