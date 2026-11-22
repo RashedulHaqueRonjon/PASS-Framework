@@ -11,3 +11,4 @@ This project is in the research/RFC phase. The log records material documentatio
 - Specify database-first as the initial source-of-truth mode.
 - Add cross-artifact dependency-impact analysis and explicit stop/report conflict rules.
 - Add architecture, research, testing, security and guide documentation.
+- License documentation under CC BY 4.0 (`docs/LICENSE`); source code remains under Apache 2.0.
