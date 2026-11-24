@@ -9,7 +9,7 @@
 - **Generation snapshot tests:** generated C#, Razor, JSON and project artifacts compared against approved snapshots.
 - **End-to-end tests:**   
 *Success pat*h: inspect → plan → approve prepare → prepare → review → approve apply → apply → verify → complete.  
-*Failure path*: inspect → plan → approve prepare → prepare → review → approve apply → apply → verification failure → rollback → verify restoration.
+*Failure path*: inspect → plan → approve prepare → prepare → review → approve apply → apply → verification failure → rollback → restore pre-application state → verify restoration → report recovery result.
 - **Security tests:** path traversal, untrusted metadata/template content, injection, secret leakage, authorization bypass and unsafe SQL sorting.
 - **Failure-injection tests:** database disconnect, staging failure, file-write failure, validation failure and rollback failure.
 
